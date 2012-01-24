@@ -1,83 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>edu.vt.jgwes</groupId>
     <artifactId>hibs</artifactId>
     <version>1.0.0</version>
-    <packaging>pom</packaging>
-
-    <name>Hibs</name>
-    <description>No description</description>
-
+    
     <properties>
         <!-- Skip artifact deployment -->
-       	<maven.deploy.skip>true</maven.deploy.skip>
+        <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
-
-        <dependencies>
+    
+    <dependencies>
+    	<dependency>
+   			<groupId>mysql</groupId>
+  	 		<artifactId>mysql-connector-java</artifactId>
+   			<version>5.1.13</version>
+		</dependency>
+		
+		<dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.2</version>
+        </dependency>
+        
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>4.0.1.Final</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.6.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.8.2</version>
-        </dependency>
-
-        <!-- The tutorials use the H2 in-memory database we don't 
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.2.145</version>
-        </dependency>
-        -->
     </dependencies>
-
+    
     <build>
-    	<finalName>hibs</finalName>
-		
-		<testResources>
-		 	<testResource>
-                <filtering>true</filtering>
-                <directory>src/test/java</directory>
-            </testResource>
-            <testResource>
-            	<filtering>true</filtering>
-                <directory>src/test/resources</directory>
-            </testResource>
-		</testResources>
-
-		<plugins>
-			<plugin>
+	    <plugins>
+	  		<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.5</source>
+					<source>1.6</source>
 					<target>1.6</target>
 				</configuration>
-				<version>2.1.1</version>
 			</plugin>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.5</version>
-			</plugin>
-			
-		</plugins>
-		
-		
-    </build>
+	  	</plugins>
+	</build>
 </project>
+
