@@ -7,21 +7,21 @@
 
     <session-factory>
 
-		<!-- mysql configuration 
+		<!-- mysql configuration -->
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.url">jdbc:mysql://localhost:3306/hibs</property>
         <property name="connection.username">quimby</property>
         <property name="connection.password">quimby</property>
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-        -->
-
-		<!-- postgresql configuration --> 
+        
+		<!-- postgresql configuration  
 	    <property name="connection.driver_class">org.postgresql.Driver</property>
     	<property name="connection.url">jdbc:postgresql://localhost/postgres</property>
         <property name="connection.username">hibs</property>
         <property name="connection.password">hibs</property>
         <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-		
+		-->
+			
         <!-- JDBC connection pool (use the built-in) change this -->
         <property name="connection.pool_size">1</property>
 
@@ -37,9 +37,10 @@
         <!-- mapped resources --> 
 		<mapping resource="hbm/Event.hbm.xml"/>
 		
-		<!-- Annotated classes -->
+		<!-- Annotated classes 
         <mapping class="edu.vt.jgwes.test.Location"/>
-
+		-->
+		
     </session-factory>
 
 </hibernate-configuration>
