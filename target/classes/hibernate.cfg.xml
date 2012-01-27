@@ -38,7 +38,7 @@
 		<mapping resource="hbm/Event.hbm.xml"/>
 		
 		<!-- Annotated classes -->
-        <mapping class="edu.vt.jgwes.dao.hibernate.Location"/>
+        <mapping class="edu.vt.jgwes.dao.hibernate.Message"/>
 		
     </session-factory>
 

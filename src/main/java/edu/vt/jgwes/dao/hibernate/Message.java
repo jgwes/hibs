@@ -12,10 +12,9 @@ import javax.persistence.TemporalType;
 
 
 @Entity
-@Table( name = "LOCATION" )
-public class Location {
+@Table( name = "MESSAGE" )
+public class Message {
 	private Long id;
-	
 	
 	@Id
 	@GeneratedValue(generator="increment")
@@ -23,6 +22,8 @@ public class Location {
 	public Long getId() {
 	    return id;
 	}
+	
+	
 	
     private void setId(Long id) {
 		this.id = id;
