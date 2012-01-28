@@ -23,7 +23,6 @@
  */
 package edu.vt.jgwes.test;
 
-import java.util.Date;
 import java.util.List;
 
 import junit.framework.TestCase;
@@ -32,6 +31,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import edu.vt.jgwes.dao.hibernate.Message;
+
 /**
  * Illustrates the use of Hibernate native APIs.  The code here is unchanged from the {@code basic} example, the
  * only difference being the use of annotations to supply the metadata instead of Hibernate mapping files.
@@ -39,8 +40,9 @@ import org.hibernate.cfg.Configuration;
  * @author Steve Ebersole
  */
 public class AnnotationsIllustrationTest extends TestCase {
-	private SessionFactory sessionFactory;
 
+	private SessionFactory sessionFactory;
+	
 	@Override
 	protected void setUp() throws Exception {
 		// A SessionFactory is set up once for an application
@@ -61,18 +63,18 @@ public class AnnotationsIllustrationTest extends TestCase {
 		// create a couple of events...
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		session.save( new Event( "Our very first event!", new Date() ) );
-		session.save( new Event( "A follow up event", new Date() ) );
+		session.save( new Message( "Our very first message!" ) );
+		session.save( new Message( "A follow up message" ) );
 		session.getTransaction().commit();
 		session.close();
 
 		// now lets pull events from the database and list them
 		session = sessionFactory.openSession();
         session.beginTransaction();
-        List result = session.createQuery( "from Event" ).list();
-		for ( Event event : (List<Event>) result ) {
-			System.out.println( "Event (" + event.getDate() + ") : " + event.getTitle() );
-		}
+        List<Message> result = session.createQuery( "from Message" ).list();
+		for ( Message message : (List<Message>) result ) {
+			System.out.println( "Message (" + message.getContent() + ") " );
+		}		
         session.getTransaction().commit();
         session.close();
 	}
