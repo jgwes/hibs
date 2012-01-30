@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
 <testsuite failures="0" time="0.248" errors="0" skipped="0" tests="1" name="edu.vt.jgwes.test.NativeApiIllustrationTest">
+=======
+<testsuite failures="0" time="0.439" errors="0" skipped="0" tests="1" name="edu.vt.jgwes.test.NativeApiIllustrationTest">
+>>>>>>> f320efb50187d1fb97b6ba49436d836efac86bda
   <properties>
     <property name="jboss.i18n.generate-proxies" value="true"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -14,6 +18,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="Service Pack 1"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<<<<<<< HEAD
     <property name="user.dir" value="C:\apps\local\workspace\hibs"/>
     <property name="java.runtime.version" value="1.6.0_23-b05"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
@@ -22,6 +27,16 @@
     <property name="os.arch" value="amd64"/>
     <property name="surefire.real.class.path" value="C:\apps\local\workspace\hibs\target\surefire\surefirebooter641090131677616040.jar"/>
     <property name="java.io.tmpdir" value="C:\cygwin\tmp\"/>
+=======
+    <property name="user.dir" value="/home/jw/workspace/hibs"/>
+    <property name="java.runtime.version" value="1.7.0_02-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="basedir" value="/home/jw/workspace/hibs"/>
+    <property name="java.endorsed.dirs" value="/home/jw/jdk1.7.0_02/jre/lib/endorsed"/>
+    <property name="os.arch" value="i386"/>
+    <property name="surefire.real.class.path" value="/tmp/surefirebooter1941052753172196972.jar"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+>>>>>>> f320efb50187d1fb97b6ba49436d836efac86bda
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
@@ -36,6 +51,7 @@
     <property name="os.version" value="6.1"/>
     <property name="user.home" value="C:\Users\jgwes.HOKIES"/>
     <property name="user.timezone" value="America/New_York"/>
+<<<<<<< HEAD
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.6"/>
     <property name="file.encoding" value="Cp1252"/>
@@ -45,6 +61,18 @@
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\apps\local\Java\jdk1.6.0_23\jre"/>
     <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+=======
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="jw"/>
+    <property name="java.class.path" value="/home/jw/workspace/hibs/target/test-classes:/home/jw/workspace/hibs/target/classes:/home/jw/.m2/repository/mysql/mysql-connector-java/5.1.13/mysql-connector-java-5.1.13.jar:/home/jw/.m2/repository/junit/junit/4.8.2/junit-4.8.2.jar:/home/jw/.m2/repository/org/hibernate/hibernate-core/4.0.1.Final/hibernate-core-4.0.1.Final.jar:/home/jw/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/home/jw/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/jw/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jboss-transaction-api_1.1_spec-1.0.0.Final.jar:/home/jw/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/home/jw/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/home/jw/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar:/home/jw/.m2/repository/org/jboss/logging/jboss-logging/3.1.0.CR2/jboss-logging-3.1.0.CR2.jar:/home/jw/.m2/repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar:/home/jw/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.1.Final/hibernate-commons-annotations-4.0.1.Final.jar:/home/jw/.m2/repository/org/hibernate/hibernate-annotations/3.5.6-Final/hibernate-annotations-3.5.6-Final.jar:/home/jw/.m2/repository/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final.jar:/home/jw/.m2/repository/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.jar:/home/jw/.m2/repository/javax/persistence/persistence-api/1.0-rev-1/persistence-api-1.0-rev-1.jar:"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="/home/jw/jdk1.7.0_02/jre"/>
+    <property name="sun.java.command" value="/tmp/surefirebooter1941052753172196972.jar /tmp/surefire1350305117230209656tmp /tmp/surefire3641536801044332690tmp"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+>>>>>>> f320efb50187d1fb97b6ba49436d836efac86bda
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
@@ -60,5 +88,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+<<<<<<< HEAD
   <testcase time="0.243" classname="edu.vt.jgwes.test.NativeApiIllustrationTest" name="testBasicUsage"/>
+=======
+  <testcase time="0.439" classname="edu.vt.jgwes.test.NativeApiIllustrationTest" name="testBasicUsage"/>
+>>>>>>> f320efb50187d1fb97b6ba49436d836efac86bda
 </testsuite>

@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: edu.vt.jgwes.test.AnnotationsIllustrationTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.554 sec
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.972 sec
+>>>>>>> f320efb50187d1fb97b6ba49436d836efac86bda

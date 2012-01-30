@@ -4,6 +4,7 @@ package edu.vt.jgwes.dao.hibernate;
 import java.util.Date;
 
 import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

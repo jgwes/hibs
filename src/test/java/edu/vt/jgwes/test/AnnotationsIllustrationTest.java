@@ -41,8 +41,9 @@ import edu.vt.jgwes.dao.hibernate.Message;
  * @author Steve Ebersole
  */
 public class AnnotationsIllustrationTest extends TestCase {
-	private SessionFactory sessionFactory;
 
+	private SessionFactory sessionFactory;
+	
 	@Override
 	protected void setUp() throws Exception {
 		// A SessionFactory is set up once for an application
@@ -71,10 +72,10 @@ public class AnnotationsIllustrationTest extends TestCase {
 		// now lets pull events from the database and list them
 		session = sessionFactory.openSession();
         session.beginTransaction();
-        List result = session.createQuery( "from Message" ).list();
+        List<Message> result = session.createQuery( "from Message" ).list();
 		for ( Message message : (List<Message>) result ) {
-			System.out.println( "Message  : " + message.getContent() );
-		}
+			System.out.println( "Message (" + message.getContent() + ") " );
+		}		
         session.getTransaction().commit();
         session.close();
 	}
