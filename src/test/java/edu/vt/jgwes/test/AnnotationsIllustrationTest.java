@@ -32,6 +32,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import edu.vt.jgwes.dao.hibernate.Message;
+
 /**
  * Illustrates the use of Hibernate native APIs.  The code here is unchanged from the {@code basic} example, the
  * only difference being the use of annotations to supply the metadata instead of Hibernate mapping files.
@@ -58,20 +60,20 @@ public class AnnotationsIllustrationTest extends TestCase {
 
 	@SuppressWarnings({ "unchecked" })
 	public void testBasicUsage() {
-		// create a couple of events...
+		// create a couple of messages...
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		session.save( new Event( "Our very first event!", new Date() ) );
-		session.save( new Event( "A follow up event", new Date() ) );
+		session.save( new Message( "Our very first message!", new Date()) );
+		session.save( new Message( "A follow up message", new Date() ) );
 		session.getTransaction().commit();
 		session.close();
 
 		// now lets pull events from the database and list them
 		session = sessionFactory.openSession();
         session.beginTransaction();
-        List result = session.createQuery( "from Event" ).list();
-		for ( Event event : (List<Event>) result ) {
-			System.out.println( "Event (" + event.getDate() + ") : " + event.getTitle() );
+        List result = session.createQuery( "from Message" ).list();
+		for ( Message message : (List<Message>) result ) {
+			System.out.println( "Message  : " + message.getContent() );
 		}
         session.getTransaction().commit();
         session.close();
