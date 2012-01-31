@@ -32,7 +32,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import edu.vt.jgwes.dao.hibernate.Message;
+import edu.vt.jgwes.model.hibernate.Message;
 
 /**
  * Illustrates the use of Hibernate native APIs.  The code here is unchanged from the {@code basic} example, the
@@ -45,7 +45,7 @@ public class AnnotationsIllustrationTest extends TestCase {
 	private SessionFactory sessionFactory;
 	
 	@Override
-	protected void setUp() throws Exception {
+	protected void setUp() {
 		// A SessionFactory is set up once for an application
         sessionFactory = new Configuration()
                 .configure() // configures settings from hibernate.cfg.xml

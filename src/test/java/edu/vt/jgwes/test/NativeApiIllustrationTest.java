@@ -2,7 +2,8 @@ package edu.vt.jgwes.test;
 
 import java.util.Date;
 import java.util.List;
-import edu.vt.jgwes.dao.hibernate.Event;
+
+import edu.vt.jgwes.model.hibernate.Event;
 
 import junit.framework.TestCase;
 

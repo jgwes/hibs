@@ -29,7 +29,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import edu.vt.jgwes.dao.jpa.JPAEvent;
+import edu.vt.jgwes.model.jpa.JPAEvent;
 
 import junit.framework.TestCase;
 

@@ -8,7 +8,7 @@
             Persistence unit for JPA 
         </description>
 
-        <class>edu.vt.jgwes.dao.jpa.JPAEvent</class>
+        <class>edu.vt.jgwes.model.jpa.JPAEvent</class>
 
 		<!-- postgresql properties -->
         <properties>

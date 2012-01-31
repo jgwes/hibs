@@ -40,7 +40,7 @@
 		<mapping resource="hbm/Event.hbm.xml"/>
 		
 		<!-- Annotated classes -->
-        <mapping class="edu.vt.jgwes.dao.hibernate.Message"/>
+        <mapping class="edu.vt.jgwes.model.hibernate.Message"/>
 		
     </session-factory>
 

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+		<!-- mysql configuration 
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/hibs</property>
+        <property name="connection.username">quimby</property>
+        <property name="connection.password">quimby</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        -->
+        
+		<!-- postgresql configuration  -->
+	    <property name="connection.driver_class">org.postgresql.Driver</property>
+    	<property name="connection.url">jdbc:postgresql://localhost/postgres</property>
+        <property name="connection.username">hibs</property>
+        <property name="connection.password">hibs</property>
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		
+			
+        <!-- JDBC connection pool (use the built-in) change this -->
+        <property name="connection.pool_size">1</property>
+
+		<!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup 
+        	<property name="hbm2ddl.auto">create</property>
+        -->
+        
+        <!-- mapped resources --> 
+		<mapping resource="hbm/Event.hbm.xml"/>
+		
+		<!-- Annotated classes -->
+        <mapping class="edu.vt.jgwes.model.hibernate.Message"/>
+		
+    </session-factory>
+
+</hibernate-configuration>
