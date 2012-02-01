@@ -8,9 +8,7 @@
 </head>
 <body>
 	<form method="POST" action="SubmitHibs">
-		<!--  
-			Event: <input type="text" name="eventText" /><br />
-		-->
+		Event: <input type="text" name="eventText" /><br />
 		Message: <input type="text" name="messageText" /><br />
 		<input type="submit">
 	</form>

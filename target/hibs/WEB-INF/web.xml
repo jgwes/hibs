@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-apps_2_4.xsd"
+	version="2.4">
+
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/log4j.properties</param-value>
+  	</context-param>
+  
+	<servlet>
+		<servlet-name>HibsController</servlet-name>
+		<servlet-class>edu.vt.jgwes.controller.HibsController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HibsController</servlet-name>
+		<url-pattern>/SubmitHibs</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+    	<welcome-file>index.jsp</welcome-file>
+  	</welcome-file-list>
+
+</web-app>
+

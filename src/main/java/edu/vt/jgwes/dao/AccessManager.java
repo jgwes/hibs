@@ -3,44 +3,32 @@ package edu.vt.jgwes.dao;
 import java.util.Date;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
 import edu.vt.jgwes.model.hibernate.Event;
+import edu.vt.jgwes.model.hibernate.Message;
+import edu.vt.jgwes.util.HibernateSessionFactoryUtil;
 
 public class AccessManager {
 
-	private SessionFactory sessionFactory;
+	private Session session;
 	
-	public AccessManager() throws Exception {
-		sessionFactory = new Configuration()
-    		.configure() 
-    		.buildSessionFactory();
-	}
-	
-	public void save (String message) {
-		/*
-		Session session = sessionFactory.getCurrentSession();
+	public AccessManager() {
+		HibernateSessionFactoryUtil.getSessionFactory();
+		session = HibernateSessionFactoryUtil.getSessionFactory().getCurrentSession();
 		session.beginTransaction();
-		session.save( new Event( message, new Date()) );
-		session.getTransaction().commit();
-		session.close();
-		
-		/* 
-		session = sessionFactory.openSession();
-    	session.beginTransaction();
-    	List<Message> result = session.createQuery( "from Message" ).list();
-		for ( Message message : (List<Message>) result ) {
-		System.out.println( "Message (" + message.getContent() + ") " );
-		}		
-    	session.getTransaction().commit();
-    	session.close();
-		*/
 	}
 	
-	public void close(){
-		if (sessionFactory != null) {
-			sessionFactory.close();
-		}
+	public void createAndStoreMessage (String message) {
+		Message theMessage = new Message(message, new Date());
+		session.save(theMessage);
+	}
+	
+	public void createAndStoreEvent (String event) {
+		Event theEvent = new Event(event, new Date());
+		session.save(theEvent);
+	}
+
+	public void commit() {
+		session.getTransaction().commit();
 	}
 }
